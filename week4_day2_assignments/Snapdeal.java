@@ -27,9 +27,9 @@ public class Snapdeal {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
 		Actions action = new Actions(driver);
-		action.moveToElement(driver.findElement(By.xpath("//span[@class='labelIcon']/following-sibling::span[contains(text(),'Fashion') and @class='catText']"))).perform();
+		action.moveToElement(driver.findElement(By.xpath("//span[contains(text(),'Fashion')]"))).perform();
 		action.moveToElement(driver.findElement(By.xpath("//span[text()='Sports Shoes']"))).click().perform();
-		System.out.println("Shoes Count: "+driver.findElement(By.xpath("//h1[@class='category-name']/following::span[@class='category-name category-count']")).getText());
+		System.out.println("Shoes Count: "+driver.findElement(By.xpath("//span[contains(@class,'category-name category-count')]")).getText());
 		driver.findElement(By.xpath("//a[@class='child-cat-node dp-widget-link hashAdded']/following::div[@class='child-cat-name ' and text()='Training Shoes']")).click();
 		driver.findElement(By.xpath("//span[@class='sort-label']/following::i[@class='sd-icon sd-icon-expand-arrow sort-arrow']")).click();
 		driver.findElement(By.xpath("//li[@data-sorttype= 'plth']")).click();

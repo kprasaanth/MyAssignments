@@ -31,7 +31,7 @@ public class Amazon {
 		String price = driver.findElement(By.xpath("//span[@class='a-price-whole']")).getText();
 		System.out.println(price);
 		driver.findElement(By.xpath("//i[@class='a-icon a-icon-popover']")).click();
-		String rating = driver.findElement(By.xpath("//span[@class='a-size-medium a-color-base a-text-beside-button a-text-bold']")).getText();
+		String rating = driver.findElement(By.xpath("//span[contains(@class,'a-size-medium a-color-base')]")).getText();
 		System.out.println(rating);
 		driver.findElement(By.xpath("//*[name()='img' and @class='s-image']")).click();
 		

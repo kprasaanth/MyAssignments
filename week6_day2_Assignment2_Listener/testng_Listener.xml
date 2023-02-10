@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<listeners>
+<listener class-name="week6_day2_Assignment2_Listener.Transformer"></listener>
+</listeners>
+  <test thread-count="5" name="Listener" verbose="5">
+    <classes>
+      <class name="week6_day2_Assignment2_Listener.SalesForce_Opportunity_withoutMnadatoryDetails"/>
+      <class name="week6_day2_Assignment2_Listener.SalesForce_Opportunity"/>
+    </classes>
+  </test> <!-- Listener -->
+</suite> <!-- Suite -->
